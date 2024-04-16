@@ -76,3 +76,12 @@ mvn clean install
 ```
 java -jar target/<nombre_del_proyecto>-0.0.1-SNAPSHOT.jar
 ```
+
+## Pruebas
+Los endpoints creados en el servicio waste-manager son llamados a traves del servicio waste-gateway-service
+```
+http://localhost:8080/wasteManagers
+http://localhost:8080/wasteManagerAddresses
+```
+Para realizar pruebas importe el archivo json "Waste Manager test.postman_collection.json" desde Postman
+
