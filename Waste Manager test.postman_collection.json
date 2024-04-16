@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "f57a2760-d8fb-4736-8348-bbdfd4312ad5",
+		"name": "Waste Manager test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25805012"
+	},
+	"item": [
+		{
+			"name": "Waste Manager",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nombre de prueba\",\r\n  \"nif\": \"1234qwer\",\r\n  \"wasteManagerAddressDto\": {\r\n    \"direccion\": \"Calle de ejemplo, 123\",\r\n    \"isEnabled\": true,\r\n    \"version\": \"1\"\r\n  },\r\n  \"listOfWasteCenterAuthorization\": [\r\n    {\r\n      \"authorizationNumber\": \"AUTH1\"\r\n    },\r\n    {\r\n      \"authorizationNumber\": \"AUTH2\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/wasteManagers"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"Nombre de prueba5\",\r\n  \"nif\": \"12asdX\",\r\n  \"wasteManagerAddressDto\": {\r\n    \"direccion\": \"Calle de ejemplo, 1sdfsdf23\",\r\n    \"isEnabled\": false,\r\n    \"version\": \"2\"\r\n  },\r\n  \"listOfWasteCenterAuthorization\": [\r\n    {\r\n        \"id\": 1,\r\n        \"authorizationNumber\": \"AUTH3\"\r\n    },\r\n    {\r\n        \"id\": 2,\r\n        \"authorizationNumber\": \"AUTH4\"\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/wasteManagers/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/wasteManagers/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Waste Manager Address",
+			"item": [
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"direccion\": \"Calle Principal, Avenida del puerto\",\r\n  \"isEnabled\": true,\r\n  \"version\": 5\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/wasteManagerAddresses/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/wasteManagerAddresses/1"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
