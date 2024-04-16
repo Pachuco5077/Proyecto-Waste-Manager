@@ -63,7 +63,8 @@ git clone https://github.com/Pachuco5077/Proyecto-Waste-Manager.git
 ```
 
 ###  2. Configurar WasteManager para Usar Spring Cloud Config
-Especificar el perfil bajo el que se desea desplegar en el archivo de configuración “bootstrap.properties”.
+Especificar el perfil bajo el que se desea desplegar el servicio "waste-manager" en el archivo de configuración “bootstrap.properties” 
+Crear un repositorio en GitHub en caso para poner las configuraciones propias llamado "service-configuration", que contenga los archivos necesarios, y especificar la ruta en el archivo de configuraciones "application.properties" del servicio "waste-config-server", en la propiedad "spring.cloud.config.server.git.uri"
 
 ###  3. Ejecutar la Aplicación con Maven en Windows (en cada aplicación)<p>
 1.  Abra la consola de comandos de Windows y navega hasta el directorio raíz del proyecto.
