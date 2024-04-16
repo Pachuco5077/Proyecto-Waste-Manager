@@ -74,5 +74,5 @@ mvn clean install
 3.	Después de que Maven termine de construir el proyecto, navega al directorio 'target' dentro del directorio del proyecto:
 4.	Corra el siguiente comando Java desde la carpeta del proyecto
 ```
-java -war target/<nombre_del_proyecto>.war
+java -war target/<nombre_del_proyecto>-0.0.1-SNAPSHOT.jar.war
 ```
