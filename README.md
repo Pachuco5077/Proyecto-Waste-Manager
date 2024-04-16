@@ -62,7 +62,7 @@ Ejecute los proyectos con la prioridad:
 git clone https://github.com/Pachuco5077/Proyecto-Waste-Manager.git
 ```
 
-###  2. Configurar WasteManager para Usar Spring Cloud Config
+###  2. Configurar Spring Cloud Config en los servicios waste-manager y waste-config-server
 Especificar el perfil bajo el que se desea desplegar el servicio "waste-manager" en el archivo de configuración “bootstrap.properties” 
 Crear un repositorio en GitHub en caso para poner las configuraciones propias llamado "service-configuration", que contenga los archivos necesarios, y especificar la ruta en el archivo de configuraciones "application.properties" del servicio "waste-config-server", en la propiedad "spring.cloud.config.server.git.uri"
 
