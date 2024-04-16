@@ -37,8 +37,8 @@ Se utilizo spring cloud Gateway, ya que permite tener un punto de acceso central
 Se realizo la configuración de una ruta, con un Path que permite acceder a los servicios de waste-manager.
 
 ## Herramientas y Tecnologías Utilizadas
--	Java: Utilicé Java 17.
--	Spring Boot: Framework de desarrollo.
+-	Java 17
+-	Spring Boot 3
 -	Spring Cloud Config: Herramienta para la gestión centralizada de la configuración de aplicaciones distribuidas.
 -	GitHub: Plataforma de desarrollo colaborativo para alojar proyectos utilizando el control de versiones Git.
 -	H2 Database: Base de datos en memoria utilizada para el almacenamiento de datos en entornos de desarrollo.
@@ -52,10 +52,10 @@ Se realizo la configuración de una ruta, con un Path que permite acceder a los 
 ## Configuración y Ejecución
 
 Ejecute los proyectos con la prioridad:
-1-  waste-naming-service
-2-  waste-config-server
-3-  waste-gateway-service
-4-  waste-manager
+1.  waste-naming-service
+2.  waste-config-server
+3.  waste-gateway-service
+4.  waste-manager
 
 ###  1. Clonar el Repositorio
 ```
@@ -66,7 +66,7 @@ git clone https://github.com/Pachuco5077/Proyecto-Waste-Manager.git
 Especificar el perfil bajo el que se desea desplegar en el archivo de configuración “bootstrap.properties”.
 
 ###  3. Ejecutar la Aplicación con Maven en Windows (en cada aplicacion)<p>
-1.  Abre la consola de comandos de Windows y navega hasta el directorio raíz del proyecto.
+1.  Abra la consola de comandos de Windows y navega hasta el directorio raíz del proyecto.
 2.  Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
 ```
 mvn clean install
