@@ -7,7 +7,7 @@ El proyecto final cuenta con 5 microservicios distribuidos en 4 aplicaciones. Se
 Cuenta con dos servicios: <p>
 -	WasteManagerService: Servicio que gestiona la entidad WasteManagerEntity junto con sus entidades relacionadas. Tiene su propio CRUD y exporta un API Rest con las funciones create, update y findById. Para el manejo de la entidad WasteManagerAddressEntity, hace uso del CRUD del servicio WasteManagerAddressService.
 -	WasteManagerAddressService: Servicio que gestiona los datos correspondientes a la entidad WasteManagerAddressEntity mediante su propio CRUD. Se le agregó además los métodos REST para en caso que se quiera hacer una consulta puntual a estos datos, o se requiera una actualización.<p>
-Se utilizó la base de datos embebida H2 en memoria, y se le hicieron las configuraciones pertinentes, poniéndole como nombre “waste”. Ambos servicios trabajan en esta misma base de datos.
+Se utilizó la base de datos embebida H2 en memoria, y se le hicieron las configuraciones pertinentes, poniéndole como nombre “waste”. Ambos servicios trabajan en esta misma base de datos.<p>
 Fueron creados 6 paquetes siguiendo el patrón MVC:<p>
 -	Paquete controller: Contiene las clases que manejan las solicitudes del cliente, en este caso solicitudes Rest.
 -	Paquete dto: Contiene la representación de los datos de manera estructurada y simple para su transferencia entre el cliente y el servidor.
