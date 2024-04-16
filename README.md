@@ -7,7 +7,9 @@ El proyecto final cuenta con 5 microservicios distribuidos en 4 aplicaciones.
 Cuenta con dos servicios: <p>
 -	WasteManagerService: Servicio que gestiona la entidad WasteManagerEntity junto con sus entidades relacionadas. Tiene su propio CRUD y exporta un API Rest con las funciones create, update y findById. Para el manejo de la entidad WasteManagerAddressEntity, hace uso del CRUD del servicio WasteManagerAddressService.
 -	WasteManagerAddressService: Servicio que gestiona los datos correspondientes a la entidad WasteManagerAddressEntity mediante su propio CRUD. Se le agregó además los métodos REST para en caso que se quiera hacer una consulta puntual a estos datos, o se requiera una actualización.<p>
+
 Se utilizó la base de datos embebida H2 en memoria, y se le hicieron las configuraciones pertinentes, poniéndole como nombre “waste”. Ambos servicios trabajan en esta misma base de datos.<p>
+
 Fueron creados 6 paquetes siguiendo el patrón MVC:<p>
   -	Paquete controller: Contiene las clases que manejan las solicitudes del cliente, en este caso solicitudes Rest.
   -	Paquete dto: Contiene la representación de los datos de manera estructurada y simple para su transferencia entre el cliente y el servidor.
@@ -42,26 +44,26 @@ Se realizo la configuración de una ruta, con un Path que permite acceder a los 
 -	Maven: Herramienta de gestión de proyectos y construcción de software para Java.
 
 ## Configuración y Ejecución
-# Requirements
+## Requirements
 - Java 17
 - Spring Boot 3
 - Maven 
 
-Clonar el Repositorio
-
-## Configurar Spring Cloud Config Server
+1.  Clonar el Repositorio
+###  2. Configurar Spring Cloud Config Server
 Configurar un repositorio en GitHub para almacenar los archivos de configuración de la aplicación.
-Configurar WasteManager para Usar Spring Cloud Config
+
+###  3. Configurar WasteManager para Usar Spring Cloud Config
 Especificar el perfil bajo el que se desea desplegar en el archivo de configuración “bootstrap.properties”.
-### Ejecutar la Aplicación con Maven en Windows (en cada proyecto)<p>
-1.	Abre la consola de comandos de Windows.
-2.	Navega hasta el directorio raíz del proyecto WasteManager.
-3.	Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
+
+###  4. Ejecutar la Aplicación con Maven en Windows (en cada aplicacion)<p>
+1- Abre la consola de comandos de Windows y navega hasta el directorio raíz del proyecto.
+2-  Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
 ```
 mvn clean install
 ```
-5.	Después de que Maven termine de construir el proyecto, navega al directorio target dentro del directorio del proyecto:
-6.	Corra el siguiente comando Java desde la carpeta del proyecto
+3.	Después de que Maven termine de construir el proyecto, navega al directorio target dentro del directorio del proyecto:
+4.	Corra el siguiente comando Java desde la carpeta del proyecto
 ```
-java -war target/entumovil-service-backend-account-0.0.1-SNAPSHOT.war
+java -war target/<nombre_del_proyecti>.war
 ```
