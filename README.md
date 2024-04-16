@@ -25,7 +25,7 @@ El servicio fue desplegado bajo el perfil dev.
 ### 2.	Microservicio waste-config-server
 Servidor que se encarga de externalizar y gestionar la configuración de las las aplicaciones de forma centralizada.<p>
 Decidí cargar las configuraciones desde GitHub, ya que permite mantener las configuraciones en un solo lugar, facilita la gestión y el seguimiento de los cambios estos archivos, y es uno de los más utilizados en la comunidad de desarrollo de software
-En este caso utilice mi repositorio personal https://github.com/Pachuco5077/service-configuration, donde almacené las configuraciones de la aplicación waste-manager con dos perfiles (dev y prod).
+En este caso utilicé mi repositorio personal https://github.com/Pachuco5077/service-configuration, donde almacené las configuraciones de la aplicación waste-manager con dos perfiles (dev y prod).
 
 ### 3.	Microservicio waste-naming-service
 Servidor que se encarga de implementar el descubrimiento y registro de los servicios.<p>
@@ -33,8 +33,8 @@ Se utilizó la herramienta Eureka ya que esta se encarga de localizar y registra
 
 ### 4.	Microservicio waste-gateway-service
 Servidor que se encarga del enrutamiento dinámico<p>
-Se utilizo spring cloud Gateway, ya que permite tener un punto de acceso centralizado a nuestros microservicios.<p>
-Se realizo la configuración de una ruta, con un Path que permite acceder a los servicios de waste-manager.
+Se utilizó spring cloud Gateway, ya que permite tener un punto de acceso centralizado a nuestros microservicios.<p>
+Se realizó la configuración de una ruta, con un Path que permite acceder a los servicios de waste-manager.
 
 ## Herramientas y Tecnologías Utilizadas
 -	Java 17
@@ -44,7 +44,7 @@ Se realizo la configuración de una ruta, con un Path que permite acceder a los 
 -	H2 Database: Base de datos en memoria utilizada para el almacenamiento de datos en entornos de desarrollo.
 -	Maven: Herramienta de gestión de proyectos y construcción de software para Java.
 
-## Requirements
+## Requerimientos
 - Java 17
 - Spring Boot 3
 - Maven
@@ -65,7 +65,7 @@ git clone https://github.com/Pachuco5077/Proyecto-Waste-Manager.git
 ###  2. Configurar WasteManager para Usar Spring Cloud Config
 Especificar el perfil bajo el que se desea desplegar en el archivo de configuración “bootstrap.properties”.
 
-###  3. Ejecutar la Aplicación con Maven en Windows (en cada aplicacion)<p>
+###  3. Ejecutar la Aplicación con Maven en Windows (en cada aplicación)<p>
 1.  Abra la consola de comandos de Windows y navega hasta el directorio raíz del proyecto.
 2.  Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
 ```
@@ -78,7 +78,7 @@ java -jar target/<nombre_del_proyecto>-0.0.1-SNAPSHOT.jar
 ```
 
 ## Pruebas
-Los endpoints creados en el servicio waste-manager son llamados a traves del servicio waste-gateway-service
+Los endpoints creados en el servicio waste-manager son llamados a través del servicio waste-gateway-service
 ```
 http://localhost:8080/wasteManagers
 http://localhost:8080/wasteManagerAddresses
