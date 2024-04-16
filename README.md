@@ -44,27 +44,35 @@ Se realizo la configuración de una ruta, con un Path que permite acceder a los 
 -	H2 Database: Base de datos en memoria utilizada para el almacenamiento de datos en entornos de desarrollo.
 -	Maven: Herramienta de gestión de proyectos y construcción de software para Java.
 
-## Configuración y Ejecución
 ## Requirements
 - Java 17
 - Spring Boot 3
-- Maven 
+- Maven
+
+## Configuración y Ejecución
+
+Ejecute los proyectos con la prioridad:
+1-  waste-naming-service
+2-  waste-config-server
+3-  waste-gateway-service
+4-  waste-manager
 
 ###  1. Clonar el Repositorio
-###  2. Configurar Spring Cloud Config Server
-Configurar un repositorio en GitHub para almacenar los archivos de configuración de la aplicación.
+```
+git clone https://github.com/Pachuco5077/Proyecto-Waste-Manager.git
+```
 
-###  3. Configurar WasteManager para Usar Spring Cloud Config
+###  2. Configurar WasteManager para Usar Spring Cloud Config
 Especificar el perfil bajo el que se desea desplegar en el archivo de configuración “bootstrap.properties”.
 
-###  4. Ejecutar la Aplicación con Maven en Windows (en cada aplicacion)<p>
+###  3. Ejecutar la Aplicación con Maven en Windows (en cada aplicacion)<p>
 1.  Abre la consola de comandos de Windows y navega hasta el directorio raíz del proyecto.
 2.  Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
 ```
 mvn clean install
 ```
-3.	Después de que Maven termine de construir el proyecto, navega al directorio target dentro del directorio del proyecto:
+3.	Después de que Maven termine de construir el proyecto, navega al directorio 'target' dentro del directorio del proyecto:
 4.	Corra el siguiente comando Java desde la carpeta del proyecto
 ```
-java -war target/<nombre_del_proyecti>.war
+java -war target/<nombre_del_proyecto>.war
 ```
