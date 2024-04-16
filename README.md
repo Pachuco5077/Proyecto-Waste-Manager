@@ -48,11 +48,11 @@ Configurar un repositorio en GitHub para almacenar los archivos de configuració
 Configurar WasteManager para Usar Spring Cloud Config
 Especificar el perfil bajo el que se desea desplegar en el archivo de configuración “bootstrap.properties”.
 ### Ejecutar la Aplicación con Maven en Windows<p>
-1-	Abre la consola de comandos de Windows.
-2-	Navega hasta el directorio raíz del proyecto WasteManager.
-3-	Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
+1.	Abre la consola de comandos de Windows.
+2.	Navega hasta el directorio raíz del proyecto WasteManager.
+3.	Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
 mvn clean install
-4-	Después de que Maven termine de construir el proyecto, navega al directorio target dentro del directorio del proyecto:
-5-	Corra el siguiente comando Java desde la carpeta del proyecto
+4.	Después de que Maven termine de construir el proyecto, navega al directorio target dentro del directorio del proyecto:
+5.	Corra el siguiente comando Java desde la carpeta del proyecto
 java -war target/entumovil-service-backend-account-0.0.1-SNAPSHOT.war
 
