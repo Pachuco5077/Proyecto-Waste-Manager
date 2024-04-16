@@ -17,6 +17,7 @@ Fueron creados 6 paquetes siguiendo el patrón MVC:<p>
   -	Paquete model: Contiene la estructura de los datos de la aplicación
   -	Paquete repository: Contiene las interfaces para interactuar con la capa de persistencia de datos.
   -	Paquete service: Contiene la lógica de la aplicación y coordina las operaciones necesarias para llevar a cabo las solicitudes del cliente.<p>
+  
 Decidí utilizar la librería Lombok para reducir la cantidad de código poco relevante, la dependencia JPA para persistir a la base de datos y la dependencia Bootstrap para poder cargar la configuración de la aplicación desde un servidor de configuración externo antes de que la aplicación arranque.
 Se configuro con el 0 porque al utilizar Eureka y Spring Gateway se facilita la integración, ya que estos permiten que los servicios se registren y se enruten dinámicamente sin tener que preocuparse de puertos específicos. <p>
 El servicio fue desplegado bajo el perfil dev.
@@ -49,7 +50,7 @@ Se realizo la configuración de una ruta, con un Path que permite acceder a los 
 - Spring Boot 3
 - Maven 
 
-1.  Clonar el Repositorio
+###  1. Clonar el Repositorio
 ###  2. Configurar Spring Cloud Config Server
 Configurar un repositorio en GitHub para almacenar los archivos de configuración de la aplicación.
 
@@ -57,8 +58,8 @@ Configurar un repositorio en GitHub para almacenar los archivos de configuració
 Especificar el perfil bajo el que se desea desplegar en el archivo de configuración “bootstrap.properties”.
 
 ###  4. Ejecutar la Aplicación con Maven en Windows (en cada aplicacion)<p>
-1- Abre la consola de comandos de Windows y navega hasta el directorio raíz del proyecto.
-2-  Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
+1.  Abre la consola de comandos de Windows y navega hasta el directorio raíz del proyecto.
+2.  Ejecuta el siguiente comando para compilar y empaquetar la aplicación:
 ```
 mvn clean install
 ```
